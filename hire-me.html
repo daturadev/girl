@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!--
     <?php
         $errors = [];
         $errMessage ='';
@@ -37,6 +38,7 @@
             }
         }
     ?>
+    -->
 
     <head>
         <meta charset="utf-8">
@@ -77,9 +79,14 @@
                 <div class="container">
                     <div class="heading justify-content-center">
                         <h2>Hire Me</h2>
+                        <!--
                         <?php echo((!empty($errorMessage)) ? $errorMessage : '') ?>
+                        -->
                     </div>
-                    <form method="POST" id="contact-data">
+                    <!--
+                        <form method="POST" id="contact-data">
+                        -->
+
                         <div class="mb-3">
                             <label class="form-label" for="email">Email</label>
                             <input class="form-control" type="email" id="email" name="email" placeholder="example@girl.com">
@@ -105,7 +112,9 @@
                                         <input class="form-control" id="date" type="date" name="date">
                                     </div>
                                     <div class="col-md-6 button">
-                                        <button class="btn btn-primary d-block w-100" type="submit" value="Send">Contact Me!</button>
+                                    <!--  <button class="btn btn-primary d-block w-100" type="submit" value="Send">Contact Me!</button> -->
+                                    <button class="btn btn-primary d-block w-100" type="submit" action="alert('GitHub Pages only allows for static webpages.
+                                    View the source code to view commented PHP/JS for this form.')
                                     </div>
                                 </div>
                             </div>
@@ -144,8 +153,7 @@
                                 alert(errorMessage);
                             }
                         }, false);
-                        )
-                    </script>
+                    </script> -->
                 </div>
             </section>
         </main>
