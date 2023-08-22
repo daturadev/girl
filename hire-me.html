@@ -1,64 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!--
-    <?php
-        $errors = [];
-        $errMessage ='';
-
-        if (!empty($_POST))    {
-            $email = $_POST['email'];
-            $subject = $_POST['subject'];
-            $message = $_POST['message'];
-
-            if(empty($email))    {
-                $errors[] = 'No email provided'
-            }
-            else if (!jsErrors($email, FILTER_VALIDATE_EMAIL)) {
-                $errors[] = 'Invalid email';
-            }
-            if(empty(message))  {
-                $errors[] = 'No message included'
-            }
-            if (empty($errors))    {
-                $toEmail = 'jaedinnw@gmail.com';
-                $emailSubject = 'GIRL | New Email';
-                $headers = ['From:' => $email, 'Reply-To' => $email, 'Content-type' => 'text/html; charset=utf-8'];
-                $bodyParagraphs = ["Email: {$email}", "Subject:", $subject, "Message:", $message];
-                $body = join(PHP_EOL, $bodyParagraphs);
-
-                if (mail($toEmail, $emailSubject, $body, $headers)) {
-                    header('Location: submitted.html');
-                }   else {
-                        $errorMessage = 'Oops, something went wrong. Please try again later.';
+<!--  If you're taking the time to view source code, what could've been :[
+        <?php
+            $errors = [];
+            $errMessage ='';
+            
+            if (!empty($_POST))    {
+                $email = $_POST['email'];
+                $subject = $_POST['subject'];
+                $message = $_POST['message'];
+            
+                if(empty($email))    {
+                    $errors[] = 'No email provided'
                 }
-            } else {
-                $allErrors = join('<br/>', $errors);
-                $errorMessage = "<p style='color: red;'>{$allErrors}</p>";
+                else if (!jsErrors($email, FILTER_VALIDATE_EMAIL)) {
+                    $errors[] = 'Invalid email';
+                }
+                if(empty(message))  {
+                    $errors[] = 'No message included'
+                }
+                if (empty($errors))    {
+                    $toEmail = 'jaedinnw@gmail.com';
+                    $emailSubject = 'GIRL | New Email';
+                    $headers = ['From:' => $email, 'Reply-To' => $email, 'Content-type' => 'text/html; charset=utf-8'];
+                    $bodyParagraphs = ["Email: {$email}", "Subject:", $subject, "Message:", $message];
+                    $body = join(PHP_EOL, $bodyParagraphs);
+            
+                    if (mail($toEmail, $emailSubject, $body, $headers)) {
+                        header('Location: submitted.html');
+                    }   else {
+                            $errorMessage = 'Oops, something went wrong. Please try again later.';
+                    }
+                } else {
+                    $allErrors = join('<br/>', $errors);
+                    $errorMessage = "<p style='color: red;'>{$allErrors}</p>";
+                }
             }
-        }
-    ?>
-    -->
+            ?>
+        -->
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <title>Hire me - girl</title>
-        <meta property="og:image" content="https://www.daturadev.github.io/girl/assets/img/tech/gsf.png">
-        <meta name="description" content="girl | Developer Portfolio">
-        <meta property="og:type" content="website">
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="270x270" href="assets/img/mstile-150x150.png">
-        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/Lato.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Hire me - girl</title>
+    <meta property="og:image" content="https://www.daturadev.github.io/girl/assets/img/tech/gsf.png">
+    <meta name="description" content="girl | Developer Portfolio">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="270x270" href="assets/img/mstile-150x150.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Lato.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+</head>
 
-    <body>
-    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white border rounded-0 d-flex justify-content-center align-items-start order-first portfolio-navbar gradient">
-        <div class="container"><a class="navbar-brand logo" href="#" style="color: rgb(221,221,221);">girl</a>
+<body>
+    <nav
+        class="navbar navbar-dark navbar-expand-lg fixed-top bg-white border rounded-0 d-flex justify-content-center align-items-start order-first portfolio-navbar gradient">
+        <div class="container">
+            <a class="navbar-brand logo" href="#" style="color: rgb(221,221,221);">girl</a>
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="visually-hidden">Toggle navigation</span>
                 <span class="navbar-toggler-icon" style="color: rgb(221,221,221);">
@@ -66,121 +67,130 @@
             </button>
             <div id="navbarNav" class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html" style="color: rgb(221,221,221);">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects-grid-cards.html" style="color: rgb(221,221,221);">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html" style="color: rgb(221,221,221);">Home</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="projects-grid-cards.html"
+                            style="color: rgb(221,221,221);">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="cv.html" style="color: rgb(221,221,221);">CV</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="hire-me.html" style="color: rgb(221,221,221);">Hire me</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="hire-me.html"
+                            style="color: rgb(221,221,221);">Hire me</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-        <main class="page hire-me-page">
-            <section class="portfolio-block hire-me">
-                <div class="container">
-                    <div class="heading justify-content-center">
-                        <h2>Hire Me</h2>
-                        <!--
-                        <?php echo((!empty($errorMessage)) ? $errorMessage : '') ?>
-                        -->
-                    </div>
+    <main class="page hire-me-page">
+        <section class="portfolio-block hire-me">
+            <div class="container">
+                <div class="heading justify-content-center">
+                    <h2>Hire Me</h2>
                     <!--
+                            <?php echo((!empty($errorMessage)) ? $errorMessage : '') ?>
+                            -->
+                </div>
+                <!--
                         <form method="POST" id="contact-data">
                         -->
-
-                        <div class="mb-3">
-                            <label class="form-label" for="email">Email</label>
-                            <input class="form-control" type="email" id="email" name="email" placeholder="example@girl.com">
+                <div class="mb-3">
+                    <label class="form-label" for="email">Email</label>
+                    <input class="form-control" type="email" id="email" name="email" placeholder="example@girl.com">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="subject">Subject</label>
+                    <select class="form-select" id="subject" required>
+                        <optgroup label="subjects">
+                            <option value="12" selected="">Employment</option>
+                            <option value="13">Networking</option>
+                            <option value="14">Other</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="message">Message</label>
+                    <textarea class="form-control" id="message" name="message" placeholder="Life is like an onion."
+                        required></textarea>
+                </div>
+                <div class="mb-3">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="form-label" for="hire-date">Date</label>
+                            <input class="form-control" id="date" type="date" name="date">
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label" for="subject">Subject</label>
-                                <select class="form-select" id="subject" required>
-                                    <optgroup label="subjects">
-                                        <option value="12" selected="">Employment</option>
-                                        <option value="13">Networking</option>
-                                        <option value="14">Other</option>
-                                    </optgroup>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label" for="message">Message</label>
-                                <textarea class="form-control" id="message" name="message" placeholder="Life is like an onion." required></textarea>
-                            </div>
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label class="form-label" for="hire-date">Date</label>
-                                        <input class="form-control" id="date" type="date" name="date">
-                                    </div>
-                                    <br>
-                                    <div class="col-md-6 button">
-                                    <!--  <button class="btn btn-primary d-block w-100" type="submit" value="Send">Contact Me!</button> -->
-                                    <button class="btn btn-primary d-block w-100" type="submit" 
-                                        onclick="alert('GitHub Pages only allows for static webpages. View the source code to view commented PHP/JS for this form.')">
-                                    </div>
-                                </div>
-                            </div>
-                </div>
-                    </form>
-                    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
-                    <script>
-                        const validationConditions = {
-                            email: {
-                                presence: { allowEmpty: false },
-                                email: true
-                            },
-                            message: {
-                                presence: { allowEmpty: false}
-                            }
-                        };
-
-                        const form = document.getElementById('contact-data');
-                        form.addEventListener('submit', function (event)    {
-                            const values = {
-                                email: form.elements.email.value,
-                                subject: form.elements.subject.value,
-                                message: form.elements.message.value,
-                                date: form.elements.date.value
-                            };
-                            const errors = validate(values, validationConditions);
-                            if (errors) {
-                                event.preventDefault();
-                                const errorMessage = Object
-                                    .values(errors)
-                                    .map(function (values) {
-                                        return values.join(',')
-                                    })
-                                    .join("\n");
-
-                                alert(errorMessage);
-                            }
-                        }, false);
-                    </script> -->
-                </div>
-            </section>
-        </main>
-        <footer class="page-footer">
-            <div class="container-fluid font-monospace text-center" style="filter: brightness(100%) grayscale(100%) saturate(200%);">
-                <div class="links">
-                    <a href="index.html">Home</a>
-                    <a href="cv.html">Skills &amp; Certifications</a>
-                    <a href="projects-grid-cards.html">Projects</a>
-                    <a href="hire-me.html">Contact</a>
-                </div>
-                <div class="social-icons" style="margin: 19px 0px 16px;">
-                    <a href="#" data-bs-target="https://github.com/daturadev">
-                        <i class="icon ion-social-github"></i>
-                    </a>
-                    <a href="#" data-bs-target="https://www.linkedin.com/in/jaedinnotestein-williams/">
-                        <i class="icon ion-social-linkedin"></i>
-                    </a>
+                        <br>
+                        <div class="col-md-6 button">
+                            <!--  
+                                <button class="btn btn-primary d-block w-100"  type="submit" value="Send">
+                                    Contact Me!
+                                </button>
+-->
+                            <br>
+                            <button class="btn btn-primary d-block w-100"
+                                onclick="alert('GitHub Pages is unable to process requests. Please contact me directly until this issue is resolved.');">Send</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </footer>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
-        <script src="assets/js/theme.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
-    </body>
+            </form>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+            <script>
+                const validationConditions = {
+                    email: {
+                        presence: {allowEmpty: false},
+                        email: true
+                    },
+                    message: {
+                        presence: {allowEmpty: false}
+                    }
+                };
+
+                const form = document.getElementById('contact-data');
+                form.addEventListener('submit', function (event) {
+                    const values = {
+                        email: form.elements.email.value,
+                        subject: form.elements.subject.value,
+                        message: form.elements.message.value,
+                        date: form.elements.date.value
+                    };
+                    const errors = validate(values, validationConditions);
+                    if (errors) {
+                        event.preventDefault();
+                        const errorMessage = Object
+                            .values(errors)
+                            .map(function (values) {
+                                return values.join(',')
+                            })
+                            .join("\n");
+
+                        alert(errorMessage);
+                    }
+                }, false);
+            </script>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer">
+        <div class="container-fluid font-monospace text-center"
+            style="filter: brightness(100%) grayscale(100%) saturate(200%);">
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="cv.html">Skills &amp; Certifications</a>
+                <a href="projects-grid-cards.html">Projects</a>
+                <a href="hire-me.html">Contact</a>
+            </div>
+            <div class="social-icons" style="margin: 19px 0px 16px;">
+                <a href="#" data-bs-target="https://github.com/daturadev">
+                    <i class="icon ion-social-github"></i>
+                </a>
+                <a href="#" data-bs-target="https://www.linkedin.com/in/jaedinnotestein-williams/">
+                    <i class="icon ion-social-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+</body>
 
 </html>
